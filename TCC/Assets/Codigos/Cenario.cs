@@ -155,6 +155,7 @@ public class Cenario : MonoBehaviour
             textoTempo.text = "";
             textoDirecoes.text = "";
             textoTempo.text = "";
+            textoTaxaAcerto.text = "";
         }
     }
 
