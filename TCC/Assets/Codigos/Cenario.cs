@@ -54,7 +54,7 @@ public class Cenario : MonoBehaviour
             total += 1;
             acertou = true;
         }
-        if (esquerda.enabled == true && vetor.x <= -0.1)
+        else if (esquerda.enabled == true && vetor.x <= -0.1)
         {
             esquerda.enabled = false;
             acertos += 1;
@@ -62,7 +62,7 @@ public class Cenario : MonoBehaviour
             total += 1;
             acertou = true;
         }
-        if (cima.enabled == true && vetor.z >= 0.5)
+        else if (cima.enabled == true && vetor.z >= 0.5)
         {
             cima.enabled = false;
             acertos += 1;
@@ -70,7 +70,7 @@ public class Cenario : MonoBehaviour
             total += 1;
             acertou = true;
         }
-        if (baixo.enabled == true && vetor.z <= -0.5)
+        else if (baixo.enabled == true && vetor.z <= -0.5)
         {
             baixo.enabled = false;
             acertos += 1;
@@ -215,7 +215,6 @@ public class Cenario : MonoBehaviour
         {
             Vector3 vetor = Input.acceleration;
             AtivaSetas(vetor);
-            Debug.Log("Tempo setas: " + Informacoes.tempoSetasMin + " até " + Informacoes.tempoSetasMax + " Horizontal ? " + Informacoes.horizontal + " Vertical ? " + Informacoes.vertical);
             AtualizaTextos();
         }
         else
