@@ -71,7 +71,7 @@ public class Inicio : MonoBehaviour
 
     private void Awake()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        //Screen.orientation = ScreenOrientation.LandscapeLeft;
         painelTempos.SetActive(false);
         painelAviso.SetActive(false);
     }
