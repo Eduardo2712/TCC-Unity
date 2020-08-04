@@ -10,8 +10,29 @@ public class Inicio : MonoBehaviour
     public TMP_InputField tempo, tempoSetasMin, tempoSetasMax;
     public Toggle informacoesTela, vertical, horizontal;
     public GameObject painelAviso, painelTempos;
+    public TextMeshProUGUI comboBox;
 
     private bool carregarCenario = false;
+
+    private void HandleInputData(int val)
+    {
+        if (val == 0)
+        {
+            Informacoes.tempoIniciar = 0.25f;
+        }
+        else if (val == 1)
+        {
+            Informacoes.tempoIniciar = 0.5f;
+        }
+        else if (val == 2)
+        {
+            Informacoes.tempoIniciar = 1f;
+        }
+        else if (val == 3)
+        {
+            Informacoes.tempoIniciar = 1.5f;
+        }
+    }
 
     private void PassaInformacoes()
     {
