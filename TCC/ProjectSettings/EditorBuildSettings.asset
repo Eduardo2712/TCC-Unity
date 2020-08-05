@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Resultados.unity
     guid: 0abe48ba3db5592489d84f7ffb429069
+  - enabled: 1
+    path: Assets/Scenes/Espera.unity
+    guid: 608a8a5036a32624db0afb4ff00a85f3
   m_configObjects: {}

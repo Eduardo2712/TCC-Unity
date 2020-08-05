@@ -10,27 +10,30 @@ public class Inicio : MonoBehaviour
     public TMP_InputField tempo, tempoSetasMin, tempoSetasMax;
     public Toggle informacoesTela, vertical, horizontal;
     public GameObject painelAviso, painelTempos;
-    public TextMeshProUGUI comboBox;
 
     private bool carregarCenario = false;
 
-    private void HandleInputData(int val)
+    public void HandleInputData(int val)
     {
-        if (val == 0)
+        if(val == 0)
         {
-            Informacoes.tempoIniciar = 0.25f;
+            Informacoes.tempoIniciar = 0f;
         }
         else if (val == 1)
         {
-            Informacoes.tempoIniciar = 0.5f;
+            Informacoes.tempoIniciar = 15f;
         }
         else if (val == 2)
         {
-            Informacoes.tempoIniciar = 1f;
+            Informacoes.tempoIniciar = 30f;
         }
         else if (val == 3)
         {
-            Informacoes.tempoIniciar = 1.5f;
+            Informacoes.tempoIniciar = 60f;
+        }
+        else if (val == 4)
+        {
+            Informacoes.tempoIniciar = 90f;
         }
     }
 
@@ -46,7 +49,7 @@ public class Inicio : MonoBehaviour
 
     private void MensagemAtencao()
     {
-        if (tempo.text != "" && tempoSetasMax.text != "" && tempoSetasMin.text != "")
+        if (tempo.text != "" && tempoSetasMax.text != "" && tempoSetasMin.text != "" && Informacoes.tempoIniciar > 0)
         {
             if ((int.Parse(tempo.text) >= 20 && vertical.isOn == false && horizontal.isOn == false) || (int.Parse(tempo.text) >= 20 && int.Parse(tempoSetasMin.text) >= 5 && int.Parse(tempoSetasMax.text) >= 5 && vertical.isOn == true && horizontal.isOn == true) || (int.Parse(tempo.text) >= 20 && int.Parse(tempoSetasMin.text) >= 5 && int.Parse(tempoSetasMax.text) >= 5 && vertical.isOn == false && horizontal.isOn == true) || (int.Parse(tempo.text) >= 20 && int.Parse(tempoSetasMin.text) >= 5 && int.Parse(tempoSetasMax.text) >= 5 && vertical.isOn == true && horizontal.isOn == false))
             {
@@ -71,7 +74,8 @@ public class Inicio : MonoBehaviour
         if (carregarCenario == true)
         {
             PassaInformacoes();
-            SceneManager.LoadScene("Floresta");
+            Informacoes.nomeFase = "Floresta";
+            SceneManager.LoadScene("Espera");
         }
     }
 
@@ -81,7 +85,8 @@ public class Inicio : MonoBehaviour
         if (carregarCenario == true)
         {
             PassaInformacoes();
-            SceneManager.LoadScene("CidadeChuva");
+            Informacoes.nomeFase = "CidadeChuva";
+            SceneManager.LoadScene("Espera");
         }
     }
 
@@ -99,7 +104,7 @@ public class Inicio : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     void Update()
