@@ -24,7 +24,7 @@ public class Contagem : MonoBehaviour
         }
         else
         {
-            texto.SetText("" + (Informacoes.tempoIniciar - Time.timeSinceLevelLoad).ToString("F2"));
+            texto.SetText("" + (Informacoes.tempoIniciar - Time.timeSinceLevelLoad).ToString("F0"));
         }
     }
 }
