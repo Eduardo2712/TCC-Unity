@@ -12,7 +12,7 @@ public class Contagem : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(Informacoes.tempoIniciar);
+        
     }
 
     void Update()
