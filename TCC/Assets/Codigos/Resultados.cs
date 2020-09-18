@@ -45,6 +45,11 @@ public class Resultados : MonoBehaviour
         SceneManager.LoadScene("Inicio");
     }
 
+    public void Sair()
+    {
+        Application.Quit();
+    }
+
     void Start()
     {
 

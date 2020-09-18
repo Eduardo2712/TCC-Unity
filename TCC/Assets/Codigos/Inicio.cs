@@ -47,6 +47,11 @@ public class Inicio : MonoBehaviour
         Informacoes.tempoSetasMin = tempoSetasMin.text;
     }
 
+    public void Fechar()
+    {
+        Application.Quit();
+    }
+
     private void MensagemAtencao()
     {
         if (tempo.text != "" && tempoSetasMax.text != "" && tempoSetasMin.text != "" && Informacoes.tempoIniciar > 0)
