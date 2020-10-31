@@ -191,12 +191,12 @@ PrefabInstance:
     - target: {fileID: 5684051799448281393, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.068573
+      value: -0.068603516
       objectReference: {fileID: 0}
     - target: {fileID: 5684051799448281393, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.6960602
+      value: 0.69607544
       objectReference: {fileID: 0}
     - target: {fileID: 5684051799448281393, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
@@ -512,7 +512,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1793173917382863134}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1793173917382863135}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40e768efb388288468adee0f661e3dde, type: 3}
@@ -758,6 +758,14 @@ PrefabInstance:
     - target: {fileID: 1694895947, guid: 57498b58de473024a95f7d67b638b9ab, type: 3}
       propertyPath: m_Name
       value: Voltar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694895949, guid: 57498b58de473024a95f7d67b638b9ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1793173917382863136}
+    - target: {fileID: 1694895949, guid: 57498b58de473024a95f7d67b638b9ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendPingToServer
       objectReference: {fileID: 0}
     - target: {fileID: 1725138320, guid: 57498b58de473024a95f7d67b638b9ab, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1063,3 +1071,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57498b58de473024a95f7d67b638b9ab, type: 3}
+--- !u!1 &1793173917382863135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8937731958321337916, guid: 57498b58de473024a95f7d67b638b9ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1793173917382863134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1793173917382863136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793173917382863135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae26e7a5ef77154cab890605e938d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socket: {fileID: 0}
+  resultados: {fileID: 1518414302}
+--- !u!114 &1793173917382863137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793173917382863135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961346d7e16a445ff93777573e78efd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: ws://127.0.0.1:3000/socket.io/?EIO=4&transport=websocket
+  autoConnect: 1
+  reconnectDelay: 5
+  ackExpirationTime: 1800
+  pingInterval: 25
+  pingTimeout: 60

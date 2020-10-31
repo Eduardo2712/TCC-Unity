@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Inicio : MonoBehaviour
 {
-    public TMP_InputField tempo, tempoSetasMin, tempoSetasMax;
+    public TMP_InputField tempo, tempoSetasMin, tempoSetasMax, nome, idade;
     public Toggle informacoesTela, vertical, horizontal;
     public GameObject painelAviso, painelTempos;
 
@@ -45,6 +45,8 @@ public class Inicio : MonoBehaviour
         Informacoes.informacoesTela = informacoesTela.isOn;
         Informacoes.tempoSetasMax = tempoSetasMax.text;
         Informacoes.tempoSetasMin = tempoSetasMin.text;
+        Informacoes.nome = nome.text;
+        Informacoes.idade = idade.text;
     }
 
     public void Fechar()

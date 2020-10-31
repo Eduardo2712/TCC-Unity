@@ -26,12 +26,13 @@ public class Conexao : MonoBehaviour
     {
         Dictionary<string, string> result = pack.data.ToDictionary();
         Debug.Log("mensagem do servidor: " + result["message"]);
+        //Debug.Log("ID: " + result["id"]);
     }
 
     public void SendPingToServer()
     {
         Dictionary<string, string> pack = new Dictionary<string, string>();
-        pack["message"] = "Deu certo!!!";
+        pack["message"] = "A";
         socket.Emit("PING", new JSONObject(pack));
     }
 
