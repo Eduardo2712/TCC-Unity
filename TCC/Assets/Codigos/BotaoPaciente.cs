@@ -12,5 +12,7 @@ public class BotaoPaciente : MonoBehaviour
     public void Click()
     {
         envio.idClick = idPaciente;
+        envio.nome = nome;
+        envio.idade = idade;
     }
 }

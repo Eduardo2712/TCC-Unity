@@ -741,7 +741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30925003, y: 0.90400004}
   m_AnchorMax: {x: 0.9841057, y: 1}
-  m_AnchoredPosition: {x: -127.93005, y: -44.534912}
+  m_AnchoredPosition: {x: -127.92993, y: -44.534912}
   m_SizeDelta: {x: 107.24829, y: -1}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &488920230
@@ -1019,6 +1019,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 6637226963054595309}
+    - target: {fileID: 5781841966093635276, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Cadastrar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9d8402e3220a74f867b596efb200a6, type: 3}
@@ -1103,7 +1108,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 175560974}
   m_HandleRect: {fileID: 175560973}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2321,7 +2326,7 @@ PrefabInstance:
     - target: {fileID: 5781841966093635276, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SendPingToServer
+      value: Selecionar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9d8402e3220a74f867b596efb200a6, type: 3}
@@ -2596,7 +2601,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2064892308}
   m_HandleRect: {fileID: 2064892307}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 1
   m_Size: 0.6197346
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3142,6 +3147,8 @@ MonoBehaviour:
   pacientes:
     dados: []
   idClick: -1
+  nome: 
+  idade: 0
 --- !u!114 &6637226963054595310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3154,7 +3161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961346d7e16a445ff93777573e78efd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: ws://127.0.0.1:3000/socket.io/?EIO=4&transport=websocket
+  url: ws://192.168.25.181:3000/socket.io/?EIO=4&transport=websocket
   autoConnect: 1
   reconnectDelay: 5
   ackExpirationTime: 1800

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Cenas/TelaInicio.unity
+    guid: 0f80e6c43626e2c4abd4389300564d25
+  - enabled: 1
+    path: Assets/Cenas/Cadastro.unity
+    guid: 514c17536c92bdd4296790b7995bf964
+  - enabled: 1
     path: Assets/Cenas/Inicio.unity
     guid: 612a75e62e1d4644291b1b2eb087711a
   - enabled: 1

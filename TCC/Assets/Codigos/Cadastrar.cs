@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using SocketIO;
+using UnityEngine.SceneManagement;
+using TMPro;
 
-public class Conexao : MonoBehaviour
+public class Cadastrar : MonoBehaviour
 {
-    public static Conexao instancia;
+    public static Cadastrar instancia;
     public SocketIOComponent socket;
+    public TMP_InputField textoNome, textoIdade;
 
     void Start()
     {
@@ -24,23 +28,25 @@ public class Conexao : MonoBehaviour
 
     public void OnReceivePong(SocketIOEvent pack)
     {
-        Dictionary<string, string> result = pack.data.ToDictionary();
-        Debug.Log("mensagem do servidor: " + result["message"]);
-        //Debug.Log("ID: " + result["id"]);
+        
     }
 
     public void SendPingToServer()
     {
         Dictionary<string, string> pack = new Dictionary<string, string>();
-        pack["message"] = "A";
+        pack["mensagem"] = "CADASTRAR";
+        pack["nome"] = textoNome.text;
+        pack["idade"] = textoIdade.text;
         socket.Emit("PING", new JSONObject(pack));
+    }
+
+    public void Cadastro()
+    {
+        
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            SendPingToServer();
-        }
+
     }
 }

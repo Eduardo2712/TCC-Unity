@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using SocketIO;
+using UnityEngine.SceneManagement;
 
 public class Envio : MonoBehaviour
 {
@@ -12,10 +13,11 @@ public class Envio : MonoBehaviour
     public GameObject botao;
     public Pacientes pacientes = new Pacientes();
     public int idClick = -1;
+    public string nome;
+    public int idade;
 
     void Start()
     {
-        //SendPingToServer();
         if (instancia == null)
         {
             instancia = this;
@@ -67,6 +69,23 @@ public class Envio : MonoBehaviour
         pack["mensagem"] = "EXCLUIR";
         pack["idPaciente"] = idClick.ToString();
         socket.Emit("PING", new JSONObject(pack));
+        SceneManager.LoadScene("TelaInicio");
+    }
+
+    public void Cadastrar()
+    {
+        SceneManager.LoadScene("Cadastro");
+    }
+
+    public void Selecionar()
+    {
+        if (idClick > -1)
+        {
+            Informacoes.id = idClick.ToString();
+            Informacoes.nome = nome;
+            Informacoes.idade = idade.ToString();
+            SceneManager.LoadScene("Inicio");
+        }
     }
 
     void Update()
