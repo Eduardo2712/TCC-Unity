@@ -46,8 +46,6 @@ public class Inicio : MonoBehaviour
         Informacoes.informacoesTela = informacoesTela.isOn;
         Informacoes.tempoSetasMax = tempoSetasMax.text;
         Informacoes.tempoSetasMin = tempoSetasMin.text;
-        Informacoes.nome = nome.text;
-        Informacoes.idade = idade.text;
     }
 
     public void Fechar()

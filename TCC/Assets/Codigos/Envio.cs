@@ -52,6 +52,7 @@ public class Envio : MonoBehaviour
             aux.transform.GetChild(0).GetComponent<Text>().text = pacientes.dados[i].idade.ToString();
             aux.GetComponent<BotaoPaciente>().idade = pacientes.dados[i].idade;
             aux.GetComponent<BotaoPaciente>().envio = this;
+            aux.transform.localScale = new Vector3(1, 1, 1);
             i++;
         }
     }
