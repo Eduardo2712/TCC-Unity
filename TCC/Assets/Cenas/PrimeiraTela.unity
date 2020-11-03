@@ -214,6 +214,16 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5117028728827946556, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
       propertyPath: m_Color.r
@@ -515,12 +525,22 @@ PrefabInstance:
     - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
       propertyPath: m_Text
-      value: "CONFIGURA\xC7\xC3O"
+      value: "CONFIGURA\xC7\xD5ES"
       objectReference: {fileID: 0}
     - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5117028728827946556, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
@@ -707,6 +727,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5117028728827946556, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
@@ -997,6 +1027,16 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962071317969350264, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5117028728827946556, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
       propertyPath: m_Color.r
@@ -1223,7 +1263,6 @@ GameObject:
   - component: {fileID: 1994878278}
   - component: {fileID: 1994878277}
   - component: {fileID: 1994878276}
-  - component: {fileID: 1994878279}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1296,18 +1335,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1994878279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994878275}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cdb9ae600a0c6a48b4d956964777c4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2087747391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,7 +1681,7 @@ PrefabInstance:
     - target: {fileID: 5684051799448281393, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5684051799448281393, guid: 5d9d8402e3220a74f867b596efb200a6,
         type: 3}
@@ -1725,6 +1752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 6637226963054595309}
+    - target: {fileID: 5781841966093635276, guid: 5d9d8402e3220a74f867b596efb200a6,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Fechar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9d8402e3220a74f867b596efb200a6, type: 3}

@@ -12,7 +12,7 @@ public class MenuInicio : MonoBehaviour
 
    public void Exercicio()
    {
-       SceneManager.LoadScene("TelaInicio");
+       SceneManager.LoadScene("TelaPaciente");
    }
 
    public void Dados()
@@ -24,4 +24,9 @@ public class MenuInicio : MonoBehaviour
    {
        
    }
+
+   public void Fechar()
+    {
+        Application.Quit();
+    }
 }

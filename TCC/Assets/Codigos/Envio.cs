@@ -64,7 +64,7 @@ public class Envio : MonoBehaviour
         socket.Emit("PING", new JSONObject(pack));
     }
 
-    public void Excluir()
+    public void Desativar()
     {
         Dictionary<string, string> pack = new Dictionary<string, string>();
         pack["mensagem"] = "EXCLUIR";
@@ -87,6 +87,11 @@ public class Envio : MonoBehaviour
             Informacoes.idade = idade.ToString();
             SceneManager.LoadScene("Inicio");
         }
+    }
+
+    public void Voltar()
+    {
+        SceneManager.LoadScene("PrimeiraTela");
     }
 
     void Update()

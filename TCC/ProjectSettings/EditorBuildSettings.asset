@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Cenas/PrimeiraTela.unity
     guid: 8a06998bcf0bf1040a9854fc2e3d3aa6
   - enabled: 1
-    path: Assets/Cenas/TelaInicio.unity
+    path: Assets/Cenas/TelaPaciente.unity
     guid: 0f80e6c43626e2c4abd4389300564d25
   - enabled: 1
     path: Assets/Cenas/Cadastro.unity

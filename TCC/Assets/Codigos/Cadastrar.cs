@@ -40,9 +40,14 @@ public class Cadastrar : MonoBehaviour
         socket.Emit("PING", new JSONObject(pack));
     }
 
-    public void Cadastro()
+    public void Fechar()
     {
-        
+        Application.Quit();
+    }
+
+    public void Voltar()
+    {
+        SceneManager.LoadScene("PrimeiraTela");
     }
 
     void Update()
