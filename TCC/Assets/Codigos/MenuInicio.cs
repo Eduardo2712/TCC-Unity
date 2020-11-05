@@ -17,7 +17,7 @@ public class MenuInicio : MonoBehaviour
 
    public void Dados()
    {
-
+       SceneManager.LoadScene("TelaDados");
    }
 
    public void Configuracao()

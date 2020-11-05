@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Espera.unity
     guid: 608a8a5036a32624db0afb4ff00a85f3
+  - enabled: 1
+    path: Assets/Cenas/TelaDados.unity
+    guid: 8d38d57271867fe4cb5319c6f4e4ec44
   m_configObjects: {}
