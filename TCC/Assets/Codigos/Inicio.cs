@@ -108,9 +108,14 @@ public class Inicio : MonoBehaviour
         painelAviso.SetActive(false);
     }
 
+    public void Voltar()
+    {
+        SceneManager.LoadScene("TelaPaciente");
+    }
+
     void Start()
     {
-        nome.text = "Nome: " + Informacoes.nome;
+        nome.text = "Nome: " + Informacoes.nome.ToUpper();
         idade.text = "Idade: " + Informacoes.idade + " anos";
     }
 

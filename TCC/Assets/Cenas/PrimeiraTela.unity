@@ -1348,7 +1348,7 @@ GameObject:
   - component: {fileID: 2087747394}
   - component: {fileID: 2087747393}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Desenvolvedor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1368,10 +1368,10 @@ RectTransform:
   m_Father: {fileID: 6637226963054595308}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8241057, y: 0.81247944}
-  m_AnchorMax: {x: 0.9578554, y: 0.90400004}
-  m_AnchoredPosition: {x: 210, y: -322.99}
-  m_SizeDelta: {x: -1.9518127, y: 1}
+  m_AnchorMin: {x: 0.5691055, y: 0.02182636}
+  m_AnchorMax: {x: 0.9928559, y: 0.11400001}
+  m_AnchoredPosition: {x: 0, y: 1}
+  m_SizeDelta: {x: -233.95181, y: 1}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2087747393
 MonoBehaviour:
@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -588.76135, y: 0, z: 0, w: 0}
+  m_margin: {x: -233.90074, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2087747394}
     characterCount: 39

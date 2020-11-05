@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using SocketIO;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Envio : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Envio : MonoBehaviour
     public SocketIOComponent socket;
     public GameObject content;
     public GameObject botao;
+    public TMP_InputField textoNome;
     public Pacientes pacientes = new Pacientes();
     public int idClick = -1;
     public string nome;
@@ -18,6 +20,7 @@ public class Envio : MonoBehaviour
 
     void Start()
     {
+        textoNome.text = Informacoes.busca;
         if (instancia == null)
         {
             instancia = this;
@@ -57,11 +60,18 @@ public class Envio : MonoBehaviour
         }
     }
 
-    public void SendPingToServer()
+    public void BuscaPaciente()
     {
         Dictionary<string, string> pack = new Dictionary<string, string>();
-        pack["mensagem"] = "DADOS";
+        pack["mensagem"] = "PESQUISA";
+        pack["nome"] = Informacoes.busca;
         socket.Emit("PING", new JSONObject(pack));
+    }
+
+    public void Recarrega()
+    {
+        Informacoes.busca = textoNome.text.ToString();
+        SceneManager.LoadScene("TelaPaciente");
     }
 
     public void Desativar()
@@ -70,11 +80,13 @@ public class Envio : MonoBehaviour
         pack["mensagem"] = "EXCLUIR";
         pack["idPaciente"] = idClick.ToString();
         socket.Emit("PING", new JSONObject(pack));
-        SceneManager.LoadScene("TelaInicio");
+        Informacoes.busca = "";
+        SceneManager.LoadScene("TelaPaciente");
     }
 
     public void Cadastrar()
     {
+        Informacoes.busca = "";
         SceneManager.LoadScene("Cadastro");
     }
 
@@ -91,6 +103,7 @@ public class Envio : MonoBehaviour
 
     public void Voltar()
     {
+        Informacoes.busca = "";
         SceneManager.LoadScene("PrimeiraTela");
     }
 
@@ -101,7 +114,7 @@ public class Envio : MonoBehaviour
 
     IEnumerator TempoEspera()
     {
-        yield return new WaitForSeconds(0.5f);
-        SendPingToServer();
+        yield return new WaitForSeconds(1f);
+        BuscaPaciente();
     }
 }

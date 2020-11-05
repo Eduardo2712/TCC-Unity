@@ -35,7 +35,7 @@ public class Cadastrar : MonoBehaviour
     {
         Dictionary<string, string> pack = new Dictionary<string, string>();
         pack["mensagem"] = "CADASTRAR";
-        pack["nome"] = textoNome.text;
+        pack["nome"] = textoNome.text.ToUpper();
         pack["idade"] = textoIdade.text;
         socket.Emit("PING", new JSONObject(pack));
     }
