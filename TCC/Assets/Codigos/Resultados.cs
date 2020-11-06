@@ -5,14 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR;
-using SocketIO;
 
 public class Resultados : MonoBehaviour
 {
     public TMP_Text tempo, taxaAcerto, tempoSinalizacoes, total, direita, esquerda, cima, baixo;
     public GameObject painelResultados;
-    public static Resultados instancia;
-    public SocketIOComponent socket;
 
     private void Awake()
     {
@@ -43,12 +40,6 @@ public class Resultados : MonoBehaviour
         XRSettings.enabled = true;
     }
 
-    IEnumerator TempoEspera()
-    {
-        yield return new WaitForSeconds(0.1f);
-        SendPingToServer();
-    }
-
     public void Fechar()
     {
         SceneManager.LoadScene("Inicio");
@@ -59,35 +50,9 @@ public class Resultados : MonoBehaviour
         Application.Quit();
     }
 
-    public void OnReceivePong(SocketIOEvent pack)
-    {
-
-    }
-
-    public void SendPingToServer()
-    {
-        Dictionary<string, string> pack = new Dictionary<string, string>();
-        pack["mensagem"] = "EXERCICIO";
-        pack["idPaciente"] = Informacoes.id;
-        pack["tempo"] = Informacoes.tempo;
-        pack["porcentagemAcerto"] = taxaAcerto.text;
-        pack["cenario"] = Informacoes.nomeFase;
-        socket.Emit("PING", new JSONObject(pack));
-    }
-
     void Start()
     {
-        if (instancia == null)
-        {
-            instancia = this;
-            socket = GetComponent<SocketIOComponent>();
-            socket.On("PONG", OnReceivePong);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-        StartCoroutine("TempoEspera");
+
     }
 
     void Update()

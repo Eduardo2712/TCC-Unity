@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class Inicio : MonoBehaviour
 {
     public TMP_InputField tempo, tempoSetasMin, tempoSetasMax;
-    public TMP_Text nome, idade;
     public Toggle informacoesTela, vertical, horizontal;
     public GameObject painelAviso, painelTempos;
 
@@ -108,15 +107,9 @@ public class Inicio : MonoBehaviour
         painelAviso.SetActive(false);
     }
 
-    public void Voltar()
-    {
-        SceneManager.LoadScene("TelaPaciente");
-    }
-
     void Start()
     {
-        nome.text = "Nome: " + Informacoes.nome.ToUpper();
-        idade.text = "Idade: " + Informacoes.idade + " anos";
+        
     }
 
     void Update()
