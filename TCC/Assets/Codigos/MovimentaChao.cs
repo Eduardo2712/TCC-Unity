@@ -4,28 +4,39 @@ using UnityEngine;
 
 public class MovimentaChao : MonoBehaviour
 {
-    public GameObject chao;
-    private Vector3 localProxChao;
+    public List<GameObject> terrenos = new List<GameObject>();
+    public Vector3 localProxChao;
+    public float tempoDestruicao;
+    public float tempoCriaNovoTerreno;
+    public float tamanhoDosTerrenos_x;
+    private int aleatorio;
 
-    // Start is called before the first frame update
+    void Awake()
+    {
+        aleatorio = Random.Range(0, terrenos.Count - 1);
+        GameObject aux = Instantiate(terrenos[aleatorio], localProxChao, terrenos[aleatorio].transform.rotation);
+        localProxChao.x += tamanhoDosTerrenos_x;
+        Destroy(aux, tempoDestruicao);
+    }
+
     void Start()
     {
         localProxChao.x = 249;
         StartCoroutine(CriaChao());
     }
 
-    // Update is called once per frame
     void Update()
     {
-       
+
     }
 
     IEnumerator CriaChao()
     {
-        yield return new WaitForSeconds(1);
-        GameObject aux = Instantiate(chao, localProxChao, chao.transform.rotation);
-        localProxChao.x += 249;
-        Destroy(aux, 10f);
+        yield return new WaitForSeconds(tempoCriaNovoTerreno);
+        aleatorio = Random.Range(0, terrenos.Count);
+        GameObject aux = Instantiate(terrenos[aleatorio], localProxChao, terrenos[aleatorio].transform.rotation);
+        localProxChao.x += tamanhoDosTerrenos_x;
+        Destroy(aux, tempoDestruicao);
         StartCoroutine(CriaChao());
     }
 }
