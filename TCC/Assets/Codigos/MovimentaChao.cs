@@ -13,15 +13,22 @@ public class MovimentaChao : MonoBehaviour
 
     void Awake()
     {
-        aleatorio = Random.Range(0, terrenos.Count - 1);
+        aleatorio = Random.Range(0, terrenos.Count);
         GameObject aux = Instantiate(terrenos[aleatorio], localProxChao, terrenos[aleatorio].transform.rotation);
+        localProxChao.x += tamanhoDosTerrenos_x;
+        Destroy(aux, tempoDestruicao);
+        aleatorio = Random.Range(0, terrenos.Count);
+        aux = Instantiate(terrenos[aleatorio], localProxChao, terrenos[aleatorio].transform.rotation);
+        localProxChao.x += tamanhoDosTerrenos_x;
+        Destroy(aux, tempoDestruicao);
+        aleatorio = Random.Range(0, terrenos.Count);
+        aux = Instantiate(terrenos[aleatorio], localProxChao, terrenos[aleatorio].transform.rotation);
         localProxChao.x += tamanhoDosTerrenos_x;
         Destroy(aux, tempoDestruicao);
     }
 
     void Start()
     {
-        localProxChao.x = 249;
         StartCoroutine(CriaChao());
     }
 
