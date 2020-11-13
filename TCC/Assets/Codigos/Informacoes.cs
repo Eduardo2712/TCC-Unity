@@ -5,6 +5,6 @@ using UnityEngine;
 public class Informacoes : MonoBehaviour
 {
     public static string tempo, tempoSetasMin, tempoSetasMax, direita, esquerda, cima, baixo, acertos, total, acertoDireita, acertoEsquerda, acertoCima, acertoBaixo, nomeFase;
-    public static float tempoIniciar;
+    public static float tempoIniciar, velocidade;
     public static bool vertical, horizontal, informacoesTela;
 }

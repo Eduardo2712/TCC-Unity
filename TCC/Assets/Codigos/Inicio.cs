@@ -13,7 +13,7 @@ public class Inicio : MonoBehaviour
 
     private bool carregarCenario = false;
 
-    public void HandleInputData(int val)
+    public void TempoInicio(int val)
     {
         if(val == 0)
         {
@@ -34,6 +34,30 @@ public class Inicio : MonoBehaviour
         else if (val == 4)
         {
             Informacoes.tempoIniciar = 90f;
+        }
+    }
+
+    public void Velocidade(int val)
+    {
+        if(val == 0)
+        {
+            Informacoes.velocidade = 0f;
+        }
+        else if (val == 1)
+        {
+            Informacoes.velocidade = 15;
+        }
+        else if (val == 2)
+        {
+            Informacoes.velocidade = 20;
+        }
+        else if (val == 3)
+        {
+            Informacoes.velocidade = 30;
+        }
+        else if (val == 4)
+        {
+            Informacoes.velocidade = 45;
         }
     }
 
@@ -69,6 +93,7 @@ public class Inicio : MonoBehaviour
         else
         {
             carregarCenario = false;
+            Debug.Log("ENTROU");
             painelAviso.SetActive(true);
         }
     }
@@ -79,7 +104,7 @@ public class Inicio : MonoBehaviour
         if (carregarCenario == true)
         {
             PassaInformacoes();
-            Informacoes.nomeFase = "Floresta";
+            Informacoes.nomeFase = "FlorestaDia";
             SceneManager.LoadScene("Espera");
         }
     }
@@ -91,6 +116,17 @@ public class Inicio : MonoBehaviour
         {
             PassaInformacoes();
             Informacoes.nomeFase = "CidadeChuva";
+            SceneManager.LoadScene("Espera");
+        }
+    }
+
+    public void BotaoFlorestaNoite()
+    {
+        MensagemAtencao();
+        if (carregarCenario == true)
+        {
+            PassaInformacoes();
+            Informacoes.nomeFase = "FlorestaNoite";
             SceneManager.LoadScene("Espera");
         }
     }
@@ -121,8 +157,8 @@ public class Inicio : MonoBehaviour
         else
         {
             painelTempos.SetActive(false);
-            tempoSetasMax.text = "0";
-            tempoSetasMin.text = "0";
+            tempoSetasMax.text = "5";
+            tempoSetasMin.text = "5";
         }
     }
 }

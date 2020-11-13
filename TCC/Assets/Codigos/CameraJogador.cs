@@ -6,9 +6,9 @@ public class CameraJogador : MonoBehaviour
 {
     public float velocidade;
 
-    void Start()
+    void Awake()
     {
-        
+        velocidade = Informacoes.velocidade;
     }
 
     void Update()
