@@ -160,5 +160,17 @@ public class Inicio : MonoBehaviour
             tempoSetasMax.text = "5";
             tempoSetasMin.text = "5";
         }
+        if(Input.GetButtonDown("Fire1"))
+        {
+            painelAviso.SetActive(true);
+        }
+        if(Input.GetButtonDown("Fire2"))
+        {
+            painelAviso.SetActive(false);
+        }
+        if(Input.GetButtonDown("Fire3"))
+        {
+            painelAviso.SetActive(true);
+        }
     }
 }
