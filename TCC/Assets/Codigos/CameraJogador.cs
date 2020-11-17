@@ -11,7 +11,7 @@ public class CameraJogador : MonoBehaviour
         velocidade = Informacoes.velocidade;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector3(velocidade, 0, 0);
     }

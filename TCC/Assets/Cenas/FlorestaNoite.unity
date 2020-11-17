@@ -494,6 +494,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6321588371436091503, guid: 287203d463cacb94984e326d3409ebb8,
         type: 3}
+    - target: {fileID: 1280983177855788460, guid: 5a2be446b836cf64485728bca37a4345,
+        type: 3}
+      propertyPath: tempoCriaNovoTerreno
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1280983177855788461, guid: 5a2be446b836cf64485728bca37a4345,
         type: 3}
       propertyPath: m_Name
