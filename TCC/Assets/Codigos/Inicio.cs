@@ -42,22 +42,27 @@ public class Inicio : MonoBehaviour
         if(val == 0)
         {
             Informacoes.velocidade = 0f;
+            Informacoes.nVelocidade = 0;
         }
         else if (val == 1)
         {
             Informacoes.velocidade = 15;
+            Informacoes.nVelocidade = 1;
         }
         else if (val == 2)
         {
             Informacoes.velocidade = 20;
+            Informacoes.nVelocidade = 2;
         }
         else if (val == 3)
         {
             Informacoes.velocidade = 30;
+            Informacoes.nVelocidade = 3;
         }
         else if (val == 4)
         {
             Informacoes.velocidade = 45;
+            Informacoes.nVelocidade = 4;
         }
     }
 
