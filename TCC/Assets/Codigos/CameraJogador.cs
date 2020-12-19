@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -85,5 +85,8 @@ public class CameraJogador : MonoBehaviour
     {
         MudaVelocidade();
         VerificaVelocidade();
+        //transform.Translate (0, 0, velocidade);
+		//transform.Rotate (0, 0, 0);
+        //transform.position = transform.position + velocidade * Time.deltaTime;
     }
 }

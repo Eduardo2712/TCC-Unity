@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/FlorestaNoite.unity
     guid: 7769f33fb4fa2e5458344a36556ad760
+  - enabled: 1
+    path: Assets/Cenas/Praia.unity
+    guid: 2a4ef828c56bdb74db3fd06429058128
   m_configObjects: {}

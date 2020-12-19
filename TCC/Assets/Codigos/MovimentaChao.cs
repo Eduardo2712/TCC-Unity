@@ -29,21 +29,24 @@ public class MovimentaChao : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(CriaChao());
+        CriaChao();
+        CriaChao();
+        CriaChao();
+        InvokeRepeating("CriaChao", 0f, tempoCriaNovoTerreno);
     }
 
     void Update()
     {
-
+        
     }
 
-    IEnumerator CriaChao()
+    void CriaChao()
     {
-        yield return new WaitForSeconds(tempoCriaNovoTerreno);
+        //yield return new WaitForSeconds(tempoCriaNovoTerreno);
         aleatorio = Random.Range(0, terrenos.Count);
         GameObject aux = Instantiate(terrenos[aleatorio], localProxChao, terrenos[aleatorio].transform.rotation);
         localProxChao.x += tamanhoDosTerrenos_x;
         Destroy(aux, tempoDestruicao);
-        StartCoroutine(CriaChao());
+        //StartCoroutine(CriaChao());
     }
 }
