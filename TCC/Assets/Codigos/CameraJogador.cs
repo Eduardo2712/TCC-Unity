@@ -18,19 +18,19 @@ public class CameraJogador : MonoBehaviour
     {
         if (nVelocidade == 1)
         {
-            velocidade = 15;
+            velocidade = 0.5f;
         }
         if (nVelocidade == 2)
         {
-            velocidade = 20;
+            velocidade = 1;
         }
         if (nVelocidade == 3)
         {
-            velocidade = 30;
+            velocidade = 2;
         }
         if (nVelocidade == 4)
         {
-            velocidade = 45;
+            velocidade = 3;
         }
     }
 
@@ -78,14 +78,14 @@ public class CameraJogador : MonoBehaviour
 
     void FixedUpdate()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector3(velocidade, 0, 0);
+        //GetComponent<Rigidbody2D>().velocity = new Vector3(velocidade, 0, 0);
     }
 
     void Update()
     {
         MudaVelocidade();
         VerificaVelocidade();
-        //transform.Translate (0, 0, velocidade);
+        transform.Translate (velocidade, 0, 0);
 		//transform.Rotate (0, 0, 0);
         //transform.position = transform.position + velocidade * Time.deltaTime;
     }
