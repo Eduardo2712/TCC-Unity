@@ -474,7 +474,7 @@ PrefabInstance:
     - target: {fileID: 1280983177855788460, guid: 5a2be446b836cf64485728bca37a4345,
         type: 3}
       propertyPath: tempoDestruicao
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1280983177855788460, guid: 5a2be446b836cf64485728bca37a4345,
         type: 3}
@@ -497,7 +497,7 @@ PrefabInstance:
     - target: {fileID: 1280983177855788460, guid: 5a2be446b836cf64485728bca37a4345,
         type: 3}
       propertyPath: tempoCriaNovoTerreno
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1280983177855788461, guid: 5a2be446b836cf64485728bca37a4345,
         type: 3}

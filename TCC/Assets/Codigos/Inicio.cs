@@ -15,7 +15,7 @@ public class Inicio : MonoBehaviour
 
     public void TempoInicio(int val)
     {
-        if(val == 0)
+        if (val == 0)
         {
             Informacoes.tempoIniciar = 0f;
         }
@@ -39,7 +39,7 @@ public class Inicio : MonoBehaviour
 
     public void Velocidade(int val)
     {
-        if(val == 0)
+        if (val == 0)
         {
             Informacoes.velocidade = 0f;
             Informacoes.nVelocidade = 0;
@@ -143,14 +143,13 @@ public class Inicio : MonoBehaviour
 
     private void Awake()
     {
-        //Screen.orientation = ScreenOrientation.LandscapeLeft;
         painelTempos.SetActive(false);
         painelAviso.SetActive(false);
     }
 
     void Start()
     {
-        
+
     }
 
     void Update()

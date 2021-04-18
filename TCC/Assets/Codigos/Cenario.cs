@@ -191,7 +191,6 @@ public class Cenario : MonoBehaviour
         VerificaValores();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         direita.enabled = false;
@@ -208,7 +207,6 @@ public class Cenario : MonoBehaviour
         baixoAcerto = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (double.Parse(Informacoes.tempo) >= Time.timeSinceLevelLoad)

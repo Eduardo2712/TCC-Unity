@@ -10,11 +10,6 @@ public class Contagem : MonoBehaviour
 
     private float tempo;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (Informacoes.tempoIniciar < Time.timeSinceLevelLoad)

@@ -76,17 +76,10 @@ public class CameraJogador : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        //GetComponent<Rigidbody2D>().velocity = new Vector3(velocidade, 0, 0);
-    }
-
     void Update()
     {
         MudaVelocidade();
         VerificaVelocidade();
-        transform.Translate (velocidade, 0, 0);
-		//transform.Rotate (0, 0, 0);
-        //transform.position = transform.position + velocidade * Time.deltaTime;
+        transform.Translate(velocidade, 0, 0);
     }
 }

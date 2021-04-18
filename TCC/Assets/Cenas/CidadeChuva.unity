@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44462776, g: 0.4444841, b: 0.4442478, a: 1}
+  m_IndirectSpecularColor: {r: 0.44969457, g: 0.44386944, b: 0.4363436, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -959,12 +959,12 @@ PrefabInstance:
     - target: {fileID: 1280983177855788460, guid: 5a2be446b836cf64485728bca37a4345,
         type: 3}
       propertyPath: tempoDestruicao
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1280983177855788460, guid: 5a2be446b836cf64485728bca37a4345,
         type: 3}
       propertyPath: tempoCriaNovoTerreno
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1280983177855788461, guid: 5a2be446b836cf64485728bca37a4345,
         type: 3}

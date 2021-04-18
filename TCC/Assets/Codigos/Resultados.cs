@@ -49,14 +49,4 @@ public class Resultados : MonoBehaviour
     {
         Application.Quit();
     }
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
 }
