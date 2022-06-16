@@ -38,30 +38,6 @@ public class CameraJogador : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        if (Input.GetAxis("Vertical") > 0)
-        {
-
-        }
-        if (Input.GetAxis("Vertical") < 0)
-        {
-
-        }
-        if (Input.GetAxis("Horizontal") > 0)
-        {
-
-        }
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-
-        }
-        if (Input.GetButtonDown("A"))
-        {
-
-        }
-        if (Input.GetButtonDown("B"))
-        {
-
-        }
         if (Input.GetButtonDown("C") && nVelocidade < 4)
         {
             nVelocidade += 1;
@@ -69,10 +45,6 @@ public class CameraJogador : MonoBehaviour
         if (Input.GetButtonDown("D") && nVelocidade > 1)
         {
             nVelocidade -= 1;
-        }
-        if (Input.GetButtonDown("OnOff"))
-        {
-
         }
     }
 

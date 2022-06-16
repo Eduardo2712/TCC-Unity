@@ -147,11 +147,6 @@ public class Inicio : MonoBehaviour
         painelAviso.SetActive(false);
     }
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (vertical.isOn == true || horizontal.isOn == true)

@@ -35,11 +35,6 @@ public class MovimentaChao : MonoBehaviour
         InvokeRepeating("CriaChao", 0f, tempoCriaNovoTerreno);
     }
 
-    void Update()
-    {
-
-    }
-
     void CriaChao()
     {
         aleatorio = Random.Range(0, terrenos.Count);
