@@ -7,5 +7,3 @@ Projeto de aplicativo baseado em realidade virtual para a UTI do Hospital Univer
 ![Imagem](https://github.com/Eduardo2712/TCC-Unity/blob/master/imagens/Foto2.jpeg)
 
 ![Imagem](https://github.com/Eduardo2712/TCC-Unity/blob/master/imagens/Foto3.jpeg)
-
-![Imagem](https://github.com/Eduardo2712/TCC-Unity/blob/master/imagens/Foto4.jpeg)
